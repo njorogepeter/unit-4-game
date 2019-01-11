@@ -5,10 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CyrstalsCollector Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jquery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- css -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+
 </head>
 <body>
+    <div class="container">
+        <div class="row"><h1>Crystals Collector!</h1></div>
+        <div class="row">
+            <p>You will be given a random number at the start of the game</p>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                to your score.</p>
+            <p>You win the game by matching your total score to a random number, you lose the game
+                if your total score goes above the random number.
+            </p>
+            <p> The value of each crystal is hidden from you until you click on it. </p>
+            <p>Each time when the game starts, the game will change the value of each crystal</p>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p class="matchScore">number to match</p>
+            </div>
+            <div class="col-2">
+                <p class="wins">wins</p>
+                <p class="losses">losses</p>
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">1st</div>
+            <div class="col-3">2nd</div>
+            <div class="col-3">3rd</div>
+            <div class="col-3">4th</div>
+
+        </div>
+        <div class="row"><span>totalScore</span></div>
+        <div class="row">display</div>
+
+    </div>
+
+<script src="assets/javascript/game.js">
+</script>
+
     
 </body>
 </html>
