@@ -17,40 +17,42 @@ $(".userWins").text("Wins: " + wins);
 $(".userLosses").text("Losses: " + losses);
 
 
-
-
 // display random number between 19 -120
 $(".matchScore").text(random);
 console.log(random);
 
 // generate and hide new value for each crystal between 1 - 12
+var gem = [];
 function crystalNum(){
-    gem1 = Math.floor(Math.random() * 11 + 1);
-    gem2 = Math.floor(Math.random() * 11 + 1);
-    gem3 = Math.floor(Math.random() * 11 + 1);
-    gem4 = Math.floor(Math.random() * 11 + 1);
-
+    for( var i = 0; i < 4; i++){
+        gem[i] = Math.floor(Math.random() * 11 + 1);
+    }
 }
 crystalNum();
 
+gem1 = gem[0];
+gem2 = gem[1];
+gem3 = gem[2];
+gem4 = gem[3];
+
 // capture click for each crystals
 $("#gem1").on("click",function(){
-    gemOnClick(gem1);
+    gemOnClick(gem[0]);
     console.log(gem1);
 });
 
 $("#gem2").on("click",function(){
-    gemOnClick(gem2);
+    gemOnClick(gem[1]);
     console.log(gem2);
 });
 
 $("#gem3").on("click",function(){
-    gemOnClick(gem3);
+    gemOnClick(gem[2]);
     console.log(gem3);
 });
 
 $("#gem4").on("click",function(){
-    gemOnClick(gem4);
+    gemOnClick(gem[3]);
     console.log(gem4);
 });
 
