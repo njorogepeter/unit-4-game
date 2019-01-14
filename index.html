@@ -7,53 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- jquery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
 
     <!-- bootstrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+
 
 </head>
 <body>
     <div class="container">
-        <div class="row"><h1>Crystals Collector!</h1></div>
         <div class="row">
-            <p>You will be given a random number at the start of the game</p>
-            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
-                to your score.</p>
-            <p>You win the game by matching your total score to a random number, you lose the game
-                if your total score goes above the random number.
-            </p>
-            <p> The value of each crystal is hidden from you until you click on it. </p>
-            <p>Each time when the game starts, the game will change the value of each crystal</p>
+            <div class="col-12" id="header">
+            <h1>CRYSTALS COLLECTOR</h1>
         </div>
+    </div>
         <div class="row">
-            <div class="col-6">
-                <p class="matchScore">number to match</p>
+            <div class="col-12" id="instructions">
+                <ul>
+                    <p> &#9830; You will be given a random number at the start of the game </p>
+                    <p> &#9830; There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                        to your score.</p>
+                    <p> &#9830; You win the game by matching your total score to a random number, you lose the game
+                        if your total score goes above the random number.
+                    </p>
+                    <p> &#9830; The value of each crystal is hidden from you until you click on it. </p>
+                    <p> &#9830; Each time when the game starts, the game will change the value of each crystal</p>
+                </ul>
             </div>
-            <div class="col-2">
-                <p class="userWins">Wins:</p>
+        </div>
+        <div class="row text-center" id="layout">
+            <div class="col-4"  id="display">
+                <p>Score to Match</p>
+                <h2 class="matchScore">number to match</h2>
+            </div>
+
+            <div class="col-4" id="key">
+                    <p>Total Score</p>
+                    <h2 id="total"></h2>
+                </div>
+           
+            <div class="col-4" id="keeper">
+                <p class="userWins" >Wins:</p>
                 <p class="userLosses">Losses: </p>
             
             </div>
         </div>
-        <div class="row">
-            <div class="col-3" id="gem1"><img src="assets/images/gem1.png"></div>
-            <div class="col-3" id="gem2"><img src="assets/images/gem2.png"></div>
-            <div class="col-3" id="gem3"><img src="assets/images/gem3.png"></div>
-            <div class="col-3" id="gem4"><img src="assets/images/gem4.png"></div>
+        <div class="row" id="gems">
+                <div class="col-3" id="gem1"><img src="assets/images/gem1.png"></div>
+                <div class="col-3" id="gem2"><img src="assets/images/gem2.png"></div>
+                <div class="col-3" id="gem3"><img src="assets/images/gem3.png"></div>
+                <div class="col-3" id="gem4"><img src="assets/images/gem4.png"></div>
 
         </div>
-        <div class="row"><span>totalScore</span></div>
-        <div class="row" id="total">display</div>
+        <div class="footer text-center">© 2018 Copyright
+      </div>
+        
 
     </div>
 
 <script src="assets/javascript/game.js">
 </script>
 
-    
 </body>
 </html>

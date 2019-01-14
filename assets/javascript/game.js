@@ -64,7 +64,7 @@ function gemOnClick(gemValue){
 // player wins if total score === random number from beginning of the game
     if(total === random){
         win();
-        $(".userWins").text("wins:" + wins);
+        $(".userWins").text("Wins: " + wins);
 
     }
 // player loses if score goes above the random number
